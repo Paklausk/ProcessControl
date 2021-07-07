@@ -4,6 +4,7 @@
 
 ### Start multiple continuously running processes with ease in same window with one command
 
+Small, but powerful CLI cross-platform app, which may help you deal with problems in various situations. ProcessControl opens multiple processes in a single CLI, redirects those processes output through that single CLI and then closes those processes with single press of a keyboard key. 
 
 ### Why ProcessControl is useful?
 
