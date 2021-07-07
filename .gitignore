@@ -8,5 +8,5 @@ packages/**
 .vs/**
 bin/**
 obj/**
-Properties/PublishProfiles/**
+Properties/**
 action.bat
