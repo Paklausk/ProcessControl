@@ -1,9 +1,12 @@
-﻿using ProcessControl.Objects;
+﻿using ProcessControl.FileClickActions;
+using ProcessControl.Helpers;
+using ProcessControl.Objects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace ProcessControl
 {
@@ -109,11 +112,13 @@ namespace ProcessControl
         }
         private static void RegisterDefaultConfigOpenOnDClick()
         {
-            throw new NotImplementedException("Cross platform problems");
+            if (OSHelper.GetOSType() == OSPlatform.Windows)
+                WindowsFileClickActions.RegisterForFileExtension(DEFAULT_CONFIG_FILE_NAME, "notepad");
         }
         private static void RegisterDefaultConfigRunOnDClick()
         {
-            throw new NotImplementedException("Cross platform problems");
+            if (OSHelper.GetOSType() == OSPlatform.Windows)
+                WindowsFileClickActions.RegisterForFileExtension(DEFAULT_CONFIG_FILE_NAME, $"{Process.GetCurrentProcess().MainModule.FileName} -c");
         }
         private static ProcessData ParseProcessData(string cmdLine)
         {
