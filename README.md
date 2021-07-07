@@ -4,15 +4,14 @@
 
 ### Start multiple continuously running processes with ease in same window with one command
 
-Small, but powerful CLI cross-platform app, which may help you deal with problems in various situations. ProcessControl opens multiple processes in a single CLI, redirects those processes output through that single CLI and then closes those processes with single press of a keyboard key. 
 
 ### Why ProcessControl is useful?
 
-In Windows - batch does not deliver this functionality, because if you use it regulary e.g. `npm run watch` it runs apps in queue and blocks queue until currently running app is finished and if you run batch command with start parameter e.g. `start npm run watch` it solves queue blocking problem, but creates new CLI window for every process, which is not convienient and trashes your desktop.
+In Windows - batch does not deliver this functionality, because if you use it regularly e.g. `npm run watch` it runs apps in queue and blocks queue until currently running app is finished and if you run batch command with start parameter e.g. `start npm run watch` it solves queue blocking problem, but creates new CLI window for every process, which is not convenient and trashes your desktop.
 
 Also ProcessControl can register its own file extension to be executed on files double click (works only on windows).
 
-### Avalable startup arguments
+### Available startup arguments
 
 * `-c <config_file_name>` - Starts program with custom config file
 * `-rego` - Register default config file '.pcconfig' to open on double click (Windows only)
