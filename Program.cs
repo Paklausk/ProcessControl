@@ -22,7 +22,10 @@ namespace ProcessControl
                 {
                     case "-c":
                         if (args.Length > i + 1)
+                        {
                             Start(args[i + 1]);
+                            i++;
+                        }
                         else
                         {
                             OutputError("Config file name not provided");
@@ -40,7 +43,8 @@ namespace ProcessControl
                         return;
                 }
             }
-            Start(DEFAULT_CONFIG_FILE_NAME);
+            if (args.Length == 0)
+                Start(DEFAULT_CONFIG_FILE_NAME);
         }
         private static void Start(string configFileName)
         {
